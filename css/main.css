@@ -1,0 +1,339 @@
+body {
+    overflow-x: hidden;
+}
+
+section {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-family: 'Urbanist', sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a4c3b2; /* zieleń leśna */
+    background-image: linear-gradient(315deg, #b4dfe5 0%, #4c6e78 50%, #eaf4f4 100%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+    letter-spacing: 10px;
+    text-shadow: 10px 21px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        letter-spacing: 10px;
+        font-size: 50px;
+    }
+}
+
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content; 
+    padding: 12px 100px;
+    background-color: #3d5a40;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.navbar.hidden {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbar .navbar-nav {
+    padding-left: 0; /* usuń nadmiarowe przesunięcie w prawo */
+    margin: auto; 
+}
+
+
+
+.navbar .nav-link {
+    font-size: 18px;
+    margin-left: 30px;
+    position: relative;
+    
+    
+}
+
+.navbar-logo {
+    height: 40px;       /* dopasuj do rozmiaru navbara */
+    width: auto;        /* zachowuje proporcje */
+    margin-right: 10px; /* odstęp od tekstu lub linków */
+    vertical-align: middle;
+}
+
+.navbar .nav-link:hover {
+    color: #a4c3b2; /* pastelowa zieleń */
+    
+}
+
+
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #588157; /* zielony mech */
+    box-shadow: 0 0 8px #588157;
+    visibility: hidden;
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::before,
+.nav-link:active::before {
+    width: 100%;
+    visibility: visible;
+}
+
+.dropdown-menu {
+    background-color: #588157; /* zielony mech */
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar .navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar .toggle-btn {
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    z-index: 1100;
+}
+
+.navbar .toggle-btn .bar {
+    width: 25px;
+    height: 3px;
+    margin: 7px 0 7px auto;
+    transition: all .2s ease-in-out;
+    background-color: #344e41;
+}
+
+.navbar .toggle-btn .bar:nth-child(2) {
+    width: 35px;
+}
+
+.navbar #toggle-menu {
+    display: none;
+}
+
+.navbar #toggle-menu:checked + label.toggle-btn .bar:nth-child(2) {
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+.navbar #toggle-menu:checked + label.toggle-btn .bar:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+}
+
+.navbar #toggle-menu:checked + label.toggle-btn .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.modal-dialog,
+.modal-content {
+  overflow: visible !important;
+  position: relative;
+  z-index: 1050; /* ważne, żeby dropdown był na wierzchu */
+}
+
+.modal-dialog .modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.modal-dialog .modal-body {
+    padding-top: 65px;
+}
+
+.modal-dialog .nav-link {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.modal-dialog .nav-link:hover::before,
+.modal-dialog .nav-link:active::before {
+    width: 0;
+    visibility: hidden;
+}
+
+.bg-body-tertiary {
+    background-color: #eaf4f4;
+}
+.modal-content .dropdown-menu {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  margin-top: 0.2rem;
+  display: block; 
+  z-index: 1060;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  background-color: transparent;
+}
+
+
+.modal-content .dropdown-menu {
+  position: absolute !important;
+  top: 100% !important;         /* otwieraj pod linkiem */
+  left: 0 !important;
+  margin-top: 0.125rem;         /* domyślny odstęp */
+  will-change: transform;
+  z-index: 1050;                /* wyżej niż modal */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* jeśli dropdown jest zasłonięty lub wychodzi poza okno, można też dodać: */
+.modal-dialog {
+  overflow: visible !important;
+}
+
+/* Małe ekrany - telefon i tablet */
+@media (max-width: 991px) {
+  /* Navbar - schowaj linki, pokaż hamburger */
+  .navbar .navbar-nav {
+    display: none; /* ukryj standardowe linki */
+  }
+
+  .navbar .toggle-btn {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
+  }
+
+  /* Przycisk hamburger */
+  .navbar #toggle-menu {
+    display: none;
+  }
+
+  /* Modal jako menu */
+  .modal-dialog {
+    margin-top: 60px;
+    width: 100vw;
+    max-width: 100vw;
+    height: calc(100vh - 60px);
+  }
+
+  .modal-dialog .modal-content {
+    background-color: transparent; /* kolor tła menu */
+    border-radius: 0 0 10px 10px;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .modal-dialog .modal-body {
+    padding: 40px 20px 20px 20px;
+  }
+
+  /* Linki w modalu */
+  .modal-dialog .nav-link {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #fff;
+    display: block;
+  }
+
+  .modal-dialog .nav-link:hover {
+    color: #a4c3b2;
+  }
+
+  /* Ukryj podkreślenia w modalu */
+  .modal-dialog .nav-link::before {
+    width: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+/* Duże ekrany - pokaż navbar poziomy i ukryj toggle */
+@media (min-width: 992px) {
+  .navbar .navbar-nav {
+    display: flex !important;
+  }
+
+  .navbar .toggle-btn {
+    display: none;
+  }
+
+  .modal-dialog {
+    display: none !important; /* ukryj modal na desktopie */
+  }
+}
+
+
+@media (max-width: 360px) {
+  .navbar {
+    padding: 10px 20px !important; /* mniej paddingu w navbarze */
+    width: 100vw !important; /* pełna szerokość */
+    left: 0 !important;
+    transform: none !important;
+    border-radius: 0;
+  }
+
+  .navbar .navbar-nav {
+    display: none !important; /* ukryj linki w navbarze */
+  }
+
+  .navbar .toggle-btn {
+    display: block !important;
+    position: relative;
+    top: 0;
+    margin-left: auto;
+    z-index: 1100;
+  }
+
+  /* Modal pełny ekran na małych ekranach */
+  .modal-dialog {
+    margin: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  .modal-dialog .modal-content {
+    height: 100% !important;
+    border-radius: 0 !important;
+    background-color: #3d5a40;
+    padding: 20px 10px;
+    overflow-y: auto;
+  }
+
+  .modal-dialog .modal-body {
+    padding: 20px 10px 20px 10px !important;
+  }
+
+  .modal-dialog .nav-link {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+    color: #fff !important;
+  }
+}

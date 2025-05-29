@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/opinie.css">
+</head>
+
+<body>
+  <section>
+    <div class="overlay"></div>
+    <div class="container">
+      <h3>Opinie naszych wędkarzy</h3>
+      <center>
+      <button id="showTable">Pokaż opinie</button>
+      <button id="hideTable" style="display: none;">Ukryj tabelę</button>
+      </center>
+      <script src="../js/pokaz.js"></script>
+
+      <div class="table_container" id="table_options">
+        <div class="table_container">
+          <table id="Tabela_opini">
+            <thead>
+              <tr>
+                <th rowspan="2" width="15%">Imię</th>
+                <th rowspan="2" width="15%">Nazwisko</th>
+                <th rowspan="2" width="25%">Opinia o wyprawie wędkarskiej</th>
+                <th colspan="2">Ocena wyprawy</th>
+                <th colspan="2">Daty</th>
+              </tr>
+              <tr>
+                <th>Efektywność łowienia</th>
+                <th>Ocena przewodnika</th>
+                <th>Data dodania opinii</th>
+                <th>Data wyprawy</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text-center my-4">
+        <h4>Dodaj swoją opinię o wyprawie</h4>
+      </div>
+
+      <div class="form_container">
+        <form id="opinionForm" class="row g-3">
+          <div class="col-md-6">
+            <input type="text" id="imie" class="form-control" placeholder="Imię" required>
+          </div>
+          <div class="col-md-6">
+            <input type="text" id="nazwisko" class="form-control" placeholder="Nazwisko" required>
+          </div>
+          <div class="col-12">
+            <input id="opinie" class="form-control" placeholder="Jak oceniasz wyprawę wędkarską?" required>
+          </div>
+          <div class="col-md-6">
+            <select class="form-select" id="Ocena_pomocna" required>
+              <option value="">-- Efektywność łowienia --</option>
+              <option value="Niska">Niska</option>
+              <option value="Średnia">Średnia</option>
+              <option value="Wysoka">Wysoka</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <select class="form-select" id="Ocena_prow" required>
+              <option value="">-- Ocena przewodnika --</option>
+              <option value="Słaba">Słaba</option>
+              <option value="Dobra">Dobra</option>
+              <option value="Doskonała">Doskonała</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <input type="date" id="Data_opinii" class="form-control" required placeholder="Data opinii"
+              onfocus="this.max=new Date().toISOString().split('T')[0]">
+          </div>
+          <div class="col-md-6">
+            <input type="date" id="Data_Zajec" class="form-control" required placeholder="Data wyprawy"
+              onfocus="this.max=new Date().toISOString().split('T')[0]">
+          </div>
+          <center>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Dodaj Opinię</button>
+              <button class="btn btn-primary" type="button" id="clearTable">Wyczyść tabelę</button>
+            </div>
+          </center>
+        </form>
+      </div>
+    </div>
+    </div>
+    <script src="../js/dodaj.js"></script>
+    </div>
+   <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="../zdjecia/logo.png" alt="Logo" class="navbar-logo">
+          Król Wód – Szczupak i Spółka</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navbar-modal"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <input type="checkbox" name="toggle-menu" id="toggle-menu">
+          <label for="toggle-menu" type="button" class="toggle-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </label>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Strona główna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Zaloguj.html">Zaloguj</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Zarejestruj.html">Zarejestruj</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sklep.html">Sklep</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="encyklopedia.html">Encyklopedia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Opinie.html">Opinie</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Więcej
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Konkurs.html">Konkurs</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="lowiska.html">Mapa Łowiska</a></li>
+                <li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="oblicz.html">Siła holowania ryby</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Regulamin.html">Regulamin serwisu</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Onas.html">O nas</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Kontakt.html">Kontakt</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade" data-bs-backdrop="static" id="navbar-modal" tabindex="-1" role="dialog"
+      aria-labelledby="navbar-modalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header1"></div>
+          <div class="modal-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Strona główna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Zaloguj.html">Zaloguj</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Zarejestruj.html">Zarejestruj</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sklep.html">Sklep</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="encyklopedia.html">Encyklopedia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Opinie.html">Opinie</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Więcej
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="Konkurs.html">Konkurs</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="lowiska.html">Mapa Łowiska</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="oblicz.html">Siła holowania ryby</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="Regulamin.html">Regulamin serwisu</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="Onas.html">O Nas</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="Kontakt.html">Kontakt</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-body-tertiary text-center text-lg-start">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+           <h5>Kontakt</h5>
+                    <p>
+             <strong>Król Wód – Szczupak i spółka</strong><br>
+            Oficjalny serwis dla pasjonatów wędkarstwa, przyrody i życia nad wodą.<br><br>
+
+            <strong>Redakcja i Biuro Obsługi:</strong><br>
+            kontakt@krolwod.pl<br>
+            +48 987 654 321<br>
+            ul. Rybna 15, 60-204 Poznań<br><br>
+
+            <strong>Godziny kontaktowe:</strong><br>
+            Poniedziałek – Piątek: 09:00 – 17:00<br>
+            Sobota: 10:00 – 14:00<br><br>
+
+            W sprawach współpracy, reklamy lub zgłoszeń technicznych prosimy o kontakt mailowy.<br>
+            Chętnie odpowiemy na wszystkie pytania – jesteśmy tu, by wspierać Waszą wędkarską przygodę!
+          </p>
+        </div>
+
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Elementy obowiązkowe:</h5>
+          <p>
+
+            Zegar:
+          <div id="zegar"></div>
+          <br>
+          Data:
+          <div id="data"></div>
+          <br>
+          <div id="l_wizyty">Liczba odwiedzin:
+            <br>
+            <span id="visit_count">0</span>
+          </div>
+          <br>
+          <div id="czas_na_stronie">Czas spędzony na stronie:
+            <br>
+            <span id="czas_ktory_uplynal">0 sekund</span>
+          </div>
+          <script src="../js/zegar.js"></script>
+          <script src="../js/licznik_wizyt.js"></script>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      <a class="text-body" style='text-decoration: none;'>Projekt strony internetowej wykonany w ramach
+        zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka przez <b>Jan Piechocki</b></a>
+    </div>
+  </footer>
+</body>
+
+</html>

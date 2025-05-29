@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/regulamin.css">
+</head>
+
+<body>
+  <section>
+    <div class="overlay"></div>
+    <div class="container">
+      <center>
+        <h2>Regulamin Serwisu „Król Wód – Szczupak i spółka”</h2>
+        <h1>Mapa naszych łowisk wędkarskich</h1>
+        <h4>Kliknij na poszczególne punkty, aby dowiedzieć się więcej o łowiskach</h4>
+      </center>
+      <figure class="map-container">
+        <img src="../zdjecia/mapa1.png" name="FishingMap" usemap="#FishingMapAreas" alt="Fishing Map" />
+        <map name="FishingMapAreas">
+
+       <!-- Centrum Głębin – alert -->
+<area shape="poly"
+  coords="416,236,457,209,499,180,513,195,525,209,552,216,593,208,581,231,591,252,555,247,541,265,513,260,505,280,469,260,418,244"
+  href="javascript:alert('Łowisko: Centrum Głębin – miejsce występowania dużych sandaczy')" target="_self" />
+
+<!-- Zatoka Północna – link do informacji o sandaczu -->
+<area shape="poly"
+  coords="358,293,403,308,433,326,392,344,367,356,353,342,338,350,328,340,297,348,300,335,289,321,351,307"
+  href="https://pl.wikipedia.org/wiki/Sandacz" target="_blank" />
+
+<!-- Zatoka Południowa – alert -->
+<area shape="poly"
+  coords="467,537,502,516,547,496,569,520,612,515,605,535,615,553,578,544,569,563,548,559,537,573,473,546"
+  href="javascript:alert('Łowisko: Zatoka Południowa – dobre miejsce na wieczorne sandacze')" target="_self" />
+
+<!-- Przesmyk Wschodni – link do szczupaka -->
+<area shape="poly"
+  coords="657,284,675,308,711,311,723,307,713,326,721,339,693,335,682,352,667,343,657,359,622,344,595,326,621,307"
+  href="https://atlasryb.pl/szczupak" target="_blank" />
+
+<!-- Głębia Centralna – alert -->
+<area shape="poly"
+  coords="677,396,705,429,760,420,753,445,761,465,724,460,717,472,688,467,676,484,608,460,585,444,623,424,657,416"
+  href="javascript:alert('Łowisko: Głębia Centralna – największe osobniki w jeziorze')" target="_self" />
+
+<!-- Róg Południowo-Wschodni – link do okonia -->
+<area shape="poly"
+  coords="761,521,790,548,830,533,826,555,833,572,804,564,787,584,769,577,763,592,701,573,689,564,718,546,745,536"
+  href="https://pl.wikipedia.org/wiki/Okoń_pospolity" target="_blank" />
+
+<!-- Zakole Wschodnie – link do leszcza -->
+<area shape="poly"
+  coords="828,310,861,340,900,331,899,354,903,371,865,360,859,379,833,372,825,394,761,364,753,355,786,339"
+  href="https://atlasryb.pl/leszcz" target="_blank" />
+
+        </map>
+      </figure>
+<br>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="../zdjecia/logo.png" alt="Logo" class="navbar-logo">
+          Król Wód – Szczupak i Spółka</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navbar-modal"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <input type="checkbox" name="toggle-menu" id="toggle-menu">
+          <label for="toggle-menu" type="button" class="toggle-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </label>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Strona główna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Zaloguj.html">Zaloguj</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Zarejestruj.html">Zarejestruj</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sklep.html">Sklep</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="encyklopedia.html">Encyklopedia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Opinie.html">Opinie</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Więcej
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Konkurs.html">Konkurs</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="lowiska.html">Mapa Łowiska</a></li>
+                <li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="oblicz.html">Siła holowania ryby</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Regulamin.html">Regulamin serwisu</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Onas.html">O nas</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Kontakt.html">Kontakt</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade" data-bs-backdrop="static" id="navbar-modal" tabindex="-1" role="dialog"
+      aria-labelledby="navbar-modalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header1"></div>
+          <div class="modal-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Strona główna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Zaloguj.html">Zaloguj</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Zarejestruj.html">Zarejestruj</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sklep.html">Sklep</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="encyklopedia.html">Encyklopedia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Opinie.html">Opinie</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Więcej
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="Konkurs.html">Konkurs</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="lowiska.html">Mapa Łowiska</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="oblicz.html">Siła holowania ryby</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="Regulamin.html">Regulamin serwisu</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="Onas.html">O Nas</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="Kontakt.html">Kontakt</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-body-tertiary text-center text-lg-start">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Informacje</h5>
+          <h5>Kontakt</h5>
+          <p>
+            <strong>Król Wód – Szczupak i spółka</strong><br>
+            Oficjalny serwis dla pasjonatów wędkarstwa, przyrody i życia nad wodą.<br><br>
+
+            <strong>Redakcja i Biuro Obsługi:</strong><br>
+            kontakt@krolwod.pl<br>
+            +48 987 654 321<br>
+            ul. Rybna 15, 60-204 Poznań<br><br>
+
+            <strong>Godziny kontaktowe:</strong><br>
+            Poniedziałek – Piątek: 09:00 – 17:00<br>
+            Sobota: 10:00 – 14:00<br><br>
+
+            W sprawach współpracy, reklamy lub zgłoszeń technicznych prosimy o kontakt mailowy.<br>
+            Chętnie odpowiemy na wszystkie pytania – jesteśmy tu, by wspierać Waszą wędkarską przygodę!
+          </p>
+        </div>
+
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Elementy obowiązkowe:</h5>
+          <p>
+
+            Zegar:
+          <div id="zegar"></div>
+          <br>
+          Data:
+          <div id="data"></div>
+          <br>
+          <div id="l_wizyty">Liczba odwiedzin:
+            <br>
+            <span id="visit_count">0</span>
+          </div>
+          <br>
+          <div id="czas_na_stronie">Czas spędzony na stronie:
+            <br>
+            <span id="czas_ktory_uplynal">0 sekund</span>
+          </div>
+          <script src="../js/zegar.js"></script>
+          <script src="../js/licznik_wizyt.js"></script>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      <a class="text-body" style='text-decoration: none;'>Projekt strony internetowej wykonany w ramach
+        zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka przez <b>Jan Piechocki</b></a>
+    </div>
+  </footer>
+</body>
+
+</html>

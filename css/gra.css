@@ -1,0 +1,68 @@
+  body {
+      margin: 0;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      background: linear-gradient(#a0cfff, #0077ff);
+    }
+
+    #gameCanvas {
+      display: block;
+      margin: 0 auto;
+      background: #00aaff;
+      width: 90%;
+      height: 80vh;
+    }
+
+    .fish {
+      position: absolute;
+      width: 40px;
+      height: 20px;
+      background: url('fish.png') no-repeat center;
+      background-size: contain;
+    }
+
+    .boat {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 60px;
+      background: url('boat.png') no-repeat center;
+      background-size: contain;
+    }
+
+    #score, #time {
+      position: fixed;
+      font-size: 20px;
+      color: white;
+      font-weight: bold;
+    }
+
+    #score {
+      top: 10px;
+      left: 10px;
+    }
+
+    #time {
+      top: 10px;
+      right: 10px;
+    }
+    #controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 10px;
+  justify-items: center;
+}
+#controls button {
+  font-size: 24px;
+  padding: 10px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
